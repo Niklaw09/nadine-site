@@ -1,0 +1,13 @@
+Drop photos in this folder with these exact names (JPG, about 2000px wide, under 500 KB each).
+Until a file exists, the site shows a labeled placeholder in its place.
+
+hero.jpg                      Homepage hero (wide, landscape, a strong exterior at golden hour)
+nadine.jpg                    Nadine's portrait (vertical, 4:5)
+team-1.jpg team-2.jpg team-3.jpg   Team member portraits (vertical, 4:5)
+marketing.jpg                 A beautifully photographed interior from one of HER listings
+area.jpg                      Lifestyle / scenery photo of the area
+community-south-abington.jpg  South Abington Township
+community-clarks-summit.jpg   Clarks Summit
+community-susquehanna.jpg     Susquehanna County countryside
+
+Optional: ../video/hero.mp4 — a silent 10-20 second clip, under ~8 MB, plays behind the homepage headline.
