@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact | The Nadine Krisa Peckins Team, Keller Williams, South Abington Township, PA</title>
+  <meta name="description" content="Contact the Nadine Krisa Peckins Team at Keller Williams Real Estate, 749 Northern Boulevard, Suite A, South Abington Township, PA 18411.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/src/styles.css">
+  <script type="module" src="/src/site.js"></script>
+</head>
+<body>
+  <header data-site-header></header>
+  <main>
+    <section class="section" style="padding-top:clamp(56px,8vw,110px)">
+      <div class="wrap split" style="align-items:start">
+        <div class="reveal">
+          <p class="eyebrow">Contact</p>
+          <h1 style="font-size:clamp(2.5rem,5vw,4.2rem)">Let's <em>talk.</em></h1>
+          <p class="lede">Whether you're ready to list or just starting to think about it, we're happy to answer your questions.</p>
+          <ul class="contact-list">
+            <li><strong>Call</strong><span class="big" data-phone></span></li>
+            <li><strong>Email</strong><span data-email></span></li>
+            <li><strong>Office</strong>Keller Williams Real Estate<br>749 Northern Boulevard, Suite A<br>South Abington Township, PA 18411</li>
+          </ul>
+        </div>
+        <form class="form-panel reveal d1" data-lead-form="Contact inquiry" data-thanks="Thank you! Your message is on its way and we'll be in touch shortly.">
+          <h2 style="font-size:2rem">Send us a message</h2>
+          <div class="form-grid">
+            <div class="full"><label for="c-name">Name</label><input id="c-name" name="name" autocomplete="name" required></div>
+            <div><label for="c-email">Email</label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+            <div><label for="c-phone">Phone <span class="opt">(optional)</span></label><input id="c-phone" name="phone" type="tel" autocomplete="tel"></div>
+            <div class="full"><label for="c-msg">How can we help?</label><textarea id="c-msg" name="message" required></textarea></div>
+          </div>
+          <input class="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-actions">
+            <button class="btn btn-brass" type="submit">Send message</button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+          <p class="form-note">We'll use your information only to respond to your message. <a href="privacy.html">Privacy notice</a>.</p>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer data-site-footer></footer>
+</body>
+</html>
