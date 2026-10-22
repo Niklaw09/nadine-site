@@ -13,8 +13,9 @@ export const SITE = {
   officeCity: 'South Abington Township, PA 18411',
   license: 'PA RS348943', // verified on Nadine's KW profile
 
-  phone: '', // NEEDED FROM NADINE, e.g. '(570) 555-0123'
-  email: '', // NEEDED FROM NADINE
+  phone: '(570) 533-1178', // Nadine's cell — used for "Call" buttons
+  officePhone: '(570) 585-5800', // Keller Williams office
+  email: 'wesellthe570@gmail.com',
 
   // "Search Homes" button — her Keller Williams property search.
   searchUrl: 'https://yourrealtorchick.kw.com/search',

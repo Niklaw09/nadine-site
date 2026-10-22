@@ -17,6 +17,8 @@ const isHere = (href) => href === here;
 const missing = (label) => `<span class="needed">[${label} needed]</span>`;
 const phoneHtml = () =>
   SITE.phone ? `<a href="tel:${SITE.phone.replace(/[^\d+]/g, '')}">${SITE.phone}</a>` : missing('Phone');
+const officeHtml = () =>
+  SITE.officePhone ? `<a href="tel:${SITE.officePhone.replace(/[^\d+]/g, '')}">${SITE.officePhone}</a>` : '';
 const emailHtml = () => (SITE.email ? `<a href="mailto:${SITE.email}">${SITE.email}</a>` : missing('Email'));
 
 /* ---------- Header ---------- */
@@ -62,7 +64,7 @@ if (footer) {
       </div>
       <div>
         <p class="footer-label">Contact</p>
-        <p>${phoneHtml()}<br>${emailHtml()}</p>
+        <p>Cell ${phoneHtml()}<br>Office ${officeHtml()}<br>${emailHtml()}</p>
         <p><a href="${SITE.facebookUrl}" target="_blank" rel="noopener">Facebook</a></p>
       </div>
       <div>
@@ -94,6 +96,7 @@ if (!document.body.hasAttribute('data-no-sticky')) {
 
 /* ---------- Fill contact details anywhere on a page ---------- */
 document.querySelectorAll('[data-phone]').forEach((el) => (el.innerHTML = phoneHtml()));
+document.querySelectorAll('[data-office-phone]').forEach((el) => (el.innerHTML = officeHtml()));
 document.querySelectorAll('[data-email]').forEach((el) => (el.innerHTML = emailHtml()));
 document.querySelectorAll('[data-office]').forEach((el) => (el.innerHTML = `${SITE.officeStreet}<br>${SITE.officeCity}`));
 document.querySelectorAll('[data-search-link]').forEach((el) => (el.href = SITE.searchUrl));
