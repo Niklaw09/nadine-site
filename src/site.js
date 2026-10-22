@@ -115,7 +115,8 @@ document.querySelectorAll('video[data-hero-video]').forEach((v) => {
   if (reduce || navigator.connection?.saveData) return v.remove();
   v.addEventListener('error', () => v.remove(), true);
   v.addEventListener('canplay', () => v.classList.add('ready'));
-  v.src = v.dataset.src;
+  const phone = window.matchMedia('(max-width: 760px) and (orientation: portrait)').matches;
+  v.src = (phone && v.dataset.srcMobile) || v.dataset.src;
 });
 
 /* ---------- Scroll reveal ---------- */
