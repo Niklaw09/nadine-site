@@ -119,6 +119,16 @@ document.querySelectorAll('video[data-hero-video]').forEach((v) => {
   v.src = (phone && v.dataset.srcMobile) || v.dataset.src;
 });
 
+/* ---------- Hero reel: the vertical clip in a frame beside the headline on computers ---------- */
+document.querySelectorAll('video[data-reel-video]').forEach((v) => {
+  const frame = v.closest('.hero-reel');
+  const wide = window.matchMedia('(min-width: 901px)').matches;
+  if (reduce || !wide) return frame?.remove();
+  v.addEventListener('error', () => frame?.remove(), true);
+  v.addEventListener('canplay', () => frame?.classList.add('ready'));
+  v.src = v.dataset.src;
+});
+
 /* ---------- Scroll reveal ---------- */
 const io = 'IntersectionObserver' in window && !reduce
   ? new IntersectionObserver(
@@ -190,7 +200,7 @@ if (document.body.hasAttribute('data-loop')) {
     clone.classList.add('hero-clone');
     clone.setAttribute('aria-hidden', 'true');
     clone.inert = true;
-    clone.querySelectorAll('video').forEach((v) => v.remove());
+    clone.querySelectorAll('video[data-hero-video]').forEach((v) => v.remove());
     clone.querySelectorAll('[id]').forEach((el) => el.removeAttribute('id'));
     document.body.append(clone);
 
