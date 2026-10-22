@@ -558,3 +558,19 @@ textarea { min-height: 130px; resize: vertical; }
 .counties h2 { font-size: clamp(2rem, 3.4vw, 2.9rem); }
 .county-list { list-style: none; padding: 0; margin: 1.8rem 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
 .county-list li { border: 1px solid var(--line); background: var(--ivory); padding: 12px 20px; font-family: var(--serif); font-size: 1.3rem; }
+
+/* Team group photo: homepage "Meet the team" panel + top of the Team page */
+.panel-team { grid-template-columns: 1.15fr 1fr; }
+.panel-team .panel-media { min-height: 0; align-self: center; aspect-ratio: 3 / 2; margin: 110px 0 80px clamp(24px, 5vw, 80px); }
+.team-group { aspect-ratio: 3 / 2; }
+.team-group-section { padding-bottom: 0; }
+@media (max-width: 860px) {
+  .panel-team { grid-template-columns: 1fr; }
+  .panel-team .panel-media { min-height: 0; margin: 88px var(--gutter) 0; }
+}
+
+/* Team photo is a cut-out (transparent background): no frame, sits on the page colour */
+.photo.cutout { background: none; }
+.photo.cutout img { object-fit: contain; object-position: center bottom; }
+.panel-team .panel-media.cutout { aspect-ratio: auto; height: min(72svh, 640px); }
+@media (max-width: 860px) { .panel-team .panel-media.cutout { height: 42svh; } }
