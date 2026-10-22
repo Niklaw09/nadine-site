@@ -20,6 +20,10 @@ export const SITE = {
   searchUrl: 'https://yourrealtorchick.kw.com/search',
   facebookUrl: 'https://www.facebook.com/nadine.krisa.peckins/',
 
+  // Small credit in the footer. Leave creditName as '' to hide it.
+  creditName: 'High Point Perspective',
+  creditUrl: 'https://highpointperspective.com',
+
   // Lead forms (Home value + Contact). See README "Connect the forms".
   // Web3Forms is free and emails each submission to the address you register.
   formEndpoint: 'https://api.web3forms.com/submit',

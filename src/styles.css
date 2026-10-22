@@ -372,6 +372,8 @@ textarea { min-height: 130px; resize: vertical; }
 .legal { padding-top: 26px; font-size: 0.78rem; color: rgba(255, 255, 255, 0.6); }
 .legal p { margin-bottom: 0.5em; }
 .eho { white-space: nowrap; }
+.credit { margin-top: 14px; opacity: 0.8; }
+.credit a { text-decoration: underline; text-underline-offset: 3px; }
 @media (max-width: 900px) { .footer-grid { grid-template-columns: 1fr 1fr; } }
 @media (max-width: 520px) { .footer-grid { grid-template-columns: 1fr; } }
 
@@ -399,3 +401,7 @@ textarea { min-height: 130px; resize: vertical; }
   *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Homepage loop: the copy of the hero shown after the footer */
+.hero-clone, .hero-clone * { animation: none !important; transition: none !important; }
+.hero-clone .reveal { opacity: 1; transform: none; }

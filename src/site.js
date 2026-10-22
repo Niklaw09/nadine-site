@@ -78,6 +78,7 @@ if (footer) {
     <div class="wrap legal">
       <p>${SITE.agentName}, Realtor® · License ${SITE.license} · ${SITE.brokerage}. Each Keller Williams® office is independently owned and operated.</p>
       <p><span class="eho">Equal Housing Opportunity</span> · We are committed to the Fair Housing Act. · <a href="privacy.html">Privacy</a> · © ${new Date().getFullYear()} ${SITE.teamName}</p>
+      ${SITE.creditName ? `<p class="credit">Website &amp; real estate media by <a href="${SITE.creditUrl}" target="_blank" rel="noopener">${SITE.creditName}</a></p>` : ''}
     </div>`;
 }
 
@@ -173,3 +174,31 @@ document.querySelectorAll('form[data-lead-form]').forEach((form) => {
     }
   });
 });
+
+/* ---------- Homepage loop: scrolling past the footer returns seamlessly to the top ----------
+   Only runs on pages whose <body> has data-loop. A copy of the hero sits after the footer;
+   when it reaches the top of the screen, the page jumps to the real hero, which looks identical.
+   Scrolling up at the top does nothing, so the loop only works in one direction. */
+if (document.body.hasAttribute('data-loop')) {
+  const hero = document.querySelector('.hero');
+  if (hero) {
+    const clone = hero.cloneNode(true);
+    clone.classList.add('hero-clone');
+    clone.setAttribute('aria-hidden', 'true');
+    clone.inert = true;
+    clone.querySelectorAll('video').forEach((v) => v.remove());
+    clone.querySelectorAll('[id]').forEach((el) => el.removeAttribute('id'));
+    document.body.append(clone);
+
+    let jumping = false;
+    const loop = () => {
+      if (jumping) return;
+      if (clone.getBoundingClientRect().top <= 1) {
+        jumping = true;
+        window.scrollTo({ top: 0, behavior: 'instant' });
+        requestAnimationFrame(() => (jumping = false));
+      }
+    };
+    window.addEventListener('scroll', loop, { passive: true });
+  }
+}
