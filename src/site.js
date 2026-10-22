@@ -253,3 +253,22 @@ document.querySelectorAll('[data-call]').forEach((a) => {
   a.href = `tel:${SITE.phone.replace(/[^\d+]/g, '')}`;
   a.textContent = `Call ${SITE.phone}`;
 });
+
+/* ---------- Videos that play only while on screen (Marketing page) ---------- */
+document.querySelectorAll('video[data-inview-video]').forEach((v) => {
+  if (reduce) {
+    v.controls = true; // no autoplay for reduced motion; visitor can press play
+    v.src = v.dataset.src;
+    return;
+  }
+  v.addEventListener('canplay', () => v.classList.add('ready'));
+  const watch = new IntersectionObserver((entries) =>
+    entries.forEach((e) => {
+      if (e.isIntersecting) {
+        if (!v.src) v.src = v.dataset.src;
+        v.play().catch(() => {});
+      } else if (v.src) v.pause();
+    })
+  );
+  watch.observe(v);
+});
