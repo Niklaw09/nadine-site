@@ -206,3 +206,40 @@ if (document.body.hasAttribute('data-loop')) {
     window.addEventListener('scroll', loop, { passive: true });
   }
 }
+
+/* ---------- Homepage sections: snap scrolling + section dots ---------- */
+if (document.body.hasAttribute('data-snap')) {
+  document.documentElement.classList.add('snap');
+  const panels = [...document.querySelectorAll('main [data-panel]')];
+  const nav = document.createElement('nav');
+  nav.className = 'dots';
+  nav.setAttribute('aria-label', 'Sections on this page');
+  panels.forEach((p, i) => {
+    if (!p.id) p.id = `section-${i + 1}`;
+    const a = document.createElement('a');
+    a.href = `#${p.id}`;
+    a.setAttribute('aria-label', p.dataset.panel);
+    a.innerHTML = `<b>${p.dataset.panel}</b><i></i>`;
+    nav.append(a);
+  });
+  document.body.append(nav);
+  const links = [...nav.children];
+  const spy = new IntersectionObserver(
+    (entries) =>
+      entries.forEach((e) => {
+        if (!e.isIntersecting) return;
+        const i = panels.indexOf(e.target);
+        links.forEach((l, j) => l.classList.toggle('active', i === j));
+        nav.classList.toggle('on-dark', e.target.dataset.tone === 'dark');
+      }),
+    { threshold: 0.5 }
+  );
+  panels.forEach((p) => spy.observe(p));
+}
+
+/* "Contact us" buttons marked data-call become a call button when a phone number is set */
+document.querySelectorAll('[data-call]').forEach((a) => {
+  if (!SITE.phone) return;
+  a.href = `tel:${SITE.phone.replace(/[^\d+]/g, '')}`;
+  a.textContent = `Call ${SITE.phone}`;
+});
