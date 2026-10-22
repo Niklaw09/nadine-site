@@ -41,15 +41,15 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
-  <script type="module" crossorigin src="/assets/site-Bf12pfoI.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/site-B_86TZ7z.css">
+  <script type="module" crossorigin src="/assets/site-CRrI6TWL.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/site-Cn0d0PDM.css">
 </head>
-<body data-loop>
+<body data-loop data-snap>
   <header data-site-header data-over-hero></header>
 
   <main>
     <!-- HERO — add /public/images/hero.jpg (and optionally /public/video/hero.mp4) -->
-    <section class="hero">
+    <section class="hero" data-panel="Welcome" data-tone="dark">
       <div class="hero-media photo" data-label="Hero: a signature NEPA listing exterior at golden hour">
         <img src="/images/hero.jpg" alt="" fetchpriority="high">
         <video data-hero-video data-src="/video/hero.mp4" data-src-mobile="/video/hero-mobile.mp4" muted autoplay loop playsinline preload="none" aria-hidden="true"></video>
@@ -65,74 +65,87 @@
       </div>
     </section>
 
-    <!-- PROOF — RealTrends Verified figures; Nadine must approve before launch -->
-    <section class="proof" aria-label="Team results">
-      <div class="wrap proof-grid">
-        <div class="stat"><div class="stat-num">#1</div><div class="stat-label">Team in South Abington Township by sides and volume, 2024</div></div>
-        <div class="stat"><div class="stat-num">76</div><div class="stat-label">Transaction sides closed in 2024</div></div>
-        <div class="stat"><div class="stat-num">$17.9M</div><div class="stat-label">Total sales volume in 2024</div></div>
-        <p class="proof-source">Source: RealTrends Verified, 2024 sales data. <span class="review">Needs Nadine's OK</span></p>
+    <!-- 01 MEET THE TEAM -->
+    <section class="panel panel-split" id="team" data-panel="Meet the team">
+      <div class="panel-media photo" data-label="Portrait of Nadine">
+        <img src="/images/nadine.jpg" alt="Nadine Krisa Peckins" loading="lazy">
+      </div>
+      <div class="panel-body reveal">
+        <p class="chapter">01 — Meet the team</p>
+        <h2>A lifelong Northeast Pennsylvanian <em>in your corner.</em></h2>
+        <p class="lede">Nadine Krisa Peckins leads a Keller Williams team in South Abington Township, alongside agents Shaye Mahoney and Brittany Nicole and administrator Cailin Burney.</p>
+        <div class="mini-stats">
+          <div><strong>#1</strong><span>Team in South Abington Twp.,<br>2024</span></div>
+          <div><strong>76</strong><span>Sides closed<br>in 2024</span></div>
+          <div><strong>$17.9M</strong><span>Sales volume<br>in 2024</span></div>
+        </div>
+        <p class="source">Source: RealTrends Verified, 2024 sales data. <span class="review">Needs Nadine's OK</span></p>
+        <a class="btn btn-ghost-dark" href="team.html">Meet the team</a>
       </div>
     </section>
 
-    <!-- MARKETING PREVIEW -->
-    <section class="section paper">
-      <div class="wrap split wide-left">
-        <div class="photo ratio-3x2 reveal" data-label="Interior from a recent listing shoot">
-          <img src="/images/marketing.jpg" alt="Professionally photographed living room in a home the team listed" loading="lazy">
-        </div>
-        <div class="reveal d1">
-          <p class="eyebrow">How we market your home</p>
-          <h2>First impressions happen <em>online.</em></h2>
-          <p class="lede">Most buyers see your home on a screen long before they walk through the front door. Our marketing is built to make that first look count.</p>
-          <p>Professional photography, cinematic video, Zillow 3D tours and floor plans — every piece is ready before your home goes live.</p>
-          <div class="btn-row"><a class="text-link" href="marketing.html">Our marketing strategy</a></div>
-        </div>
+    <!-- 02 MARKETING -->
+    <section class="panel panel-image" id="marketing" data-panel="Marketing" data-tone="dark">
+      <div class="panel-bg photo" data-label="Interior from a recent listing shoot">
+        <img src="/images/marketing.jpg" alt="" loading="lazy">
+      </div>
+      <div class="wrap panel-body reveal">
+        <p class="chapter">02 — How we market your home</p>
+        <h2>First impressions <em>happen online.</em></h2>
+        <p class="lede">Most buyers see your home on a screen long before they walk through the door. Every listing launches with a full media package.</p>
+        <ul class="chips">
+          <li>Professional photography</li>
+          <li>Cinematic video</li>
+          <li>Zillow 3D tours</li>
+          <li>Floor plans</li>
+        </ul>
+        <a class="btn btn-ghost" href="marketing.html">Our marketing strategy</a>
       </div>
     </section>
 
-    <!-- MEET NADINE -->
-    <section class="section">
-      <div class="wrap split">
-        <div class="team-photo-wrap reveal">
-          <div class="frame" aria-hidden="true"></div>
-          <div class="photo ratio-4x5" data-label="Portrait of Nadine">
-            <img src="/images/nadine.jpg" alt="Nadine Krisa Peckins" loading="lazy">
-          </div>
-        </div>
-        <div class="reveal d1">
-          <p class="eyebrow">Meet Nadine</p>
-          <h2>From busy streets <em>to country roads.</em></h2>
-          <p class="lede">Nadine Krisa Peckins is a Realtor® with Keller Williams Real Estate in South Abington Township, and a lifelong Northeast Pennsylvanian.</p>
-          <p>She leads a team built around one idea: when you know a community this well, you can tell its story — and your home's story — in a way that resonates with buyers.</p>
-          <div class="btn-row"><a class="btn btn-ghost-dark" href="team.html">Meet the team</a></div>
-        </div>
+    <!-- 03 PROCESS -->
+    <section class="panel panel-plain" id="process" data-panel="Process">
+      <div class="wrap panel-body reveal">
+        <p class="chapter">03 — The selling process</p>
+        <h2>Six clear steps, <em>from first call to closing.</em></h2>
+        <ol class="step-line">
+          <li><span>01</span>Consultation</li>
+          <li><span>02</span>Pricing strategy</li>
+          <li><span>03</span>Preparing your home</li>
+          <li><span>04</span>Launch &amp; showings</li>
+          <li><span>05</span>Offers &amp; negotiation</li>
+          <li><span>06</span>Closing day</li>
+        </ol>
+        <a class="btn btn-ghost-dark" href="process.html">See the full process</a>
       </div>
     </section>
 
-    <!-- HOME VALUE FORM -->
-    <section class="section cta-band" id="value">
-      <div class="wrap split">
-        <div class="reveal">
-          <p class="eyebrow" style="color:#e6cf9f">What's my home worth?</p>
-          <h2>Start with a <em>real conversation</em> about your home's value.</h2>
-          <p class="lede">Online estimates can't see your renovated kitchen, your view or your street. Tell us about your home and we'll prepare a personal valuation consultation.</p>
+    <!-- 04 COMMUNITIES -->
+    <section class="panel panel-image" id="communities" data-panel="Communities" data-tone="dark">
+      <div class="panel-bg photo" data-label="Susquehanna County">
+        <img src="/images/community-susquehanna.jpg" alt="" loading="lazy">
+      </div>
+      <div class="wrap panel-body reveal">
+        <p class="chapter">04 — Communities we serve</p>
+        <h2>From the Abingtons <em>to the Endless Mountains.</em></h2>
+        <ul class="place-links">
+          <li><a href="communities.html#south-abington">South Abington Township <span aria-hidden="true">→</span></a></li>
+          <li><a href="communities.html#clarks-summit">Clarks Summit <span aria-hidden="true">→</span></a></li>
+          <li><a href="communities.html#susquehanna-county">Susquehanna County <span aria-hidden="true">→</span></a></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- 05 HOME VALUE -->
+    <section class="panel panel-cta" id="value" data-panel="Home value" data-tone="dark">
+      <div class="wrap panel-body reveal">
+        <p class="chapter">05 — What's my home worth?</p>
+        <h2>Start with a real conversation <em>about your home's value.</em></h2>
+        <p class="lede">A personal valuation consultation from a local Realtor — not an automated estimate.</p>
+        <div class="btn-row">
+          <a class="btn btn-brass" href="home-value.html">Request your home's value</a>
+          <a class="btn btn-ghost" href="contact.html" data-call>Contact us</a>
         </div>
-        <form class="form-panel reveal d1" data-lead-form="Home value request" data-thanks="Thank you! We'll reach out shortly to schedule your home valuation consultation.">
-          <p class="disclaimer">This is a request for a personal valuation consultation with our team — not an instant automated appraisal.</p>
-          <div class="form-grid">
-            <div><label for="v-name">Name</label><input id="v-name" name="name" autocomplete="name" required></div>
-            <div><label for="v-email">Email</label><input id="v-email" name="email" type="email" autocomplete="email" required></div>
-            <div class="full"><label for="v-phone">Phone <span class="opt">(optional)</span></label><input id="v-phone" name="phone" type="tel" autocomplete="tel"></div>
-            <div class="full"><label for="v-address">Property address</label><input id="v-address" name="property_address" autocomplete="street-address" required placeholder="Street, town, ZIP"></div>
-          </div>
-          <input class="botcheck" type="checkbox" name="botcheck" tabindex="-1" autocomplete="off" aria-hidden="true">
-          <div class="form-actions">
-            <button class="btn btn-brass" type="submit">Request my consultation</button>
-            <p class="form-status" role="status" aria-live="polite"></p>
-          </div>
-          <p class="form-note">We'll use your information only to respond to your request. <a href="privacy.html">Privacy notice</a>.</p>
-        </form>
       </div>
     </section>
   </main>
