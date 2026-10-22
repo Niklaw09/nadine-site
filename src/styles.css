@@ -552,3 +552,9 @@ textarea { min-height: 130px; resize: vertical; }
 .media-reel video { display: block; width: 100%; aspect-ratio: 9 / 16; object-fit: cover; background: var(--evergreen); box-shadow: 0 24px 50px rgba(23, 37, 31, 0.25); }
 .media-reel figcaption { margin-top: 10px; font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--moss); }
 @media (max-width: 860px) { .media-reel { width: min(100%, 320px); } }
+
+/* Communities: "Also serving" counties (text only) */
+.also-serving { margin-top: 1.4rem; font-size: 0.95rem; color: rgba(255, 255, 255, 0.78); }
+.counties h2 { font-size: clamp(2rem, 3.4vw, 2.9rem); }
+.county-list { list-style: none; padding: 0; margin: 1.8rem 0 0; display: flex; flex-wrap: wrap; gap: 12px; }
+.county-list li { border: 1px solid var(--line); background: var(--ivory); padding: 12px 20px; font-family: var(--serif); font-size: 1.3rem; }
