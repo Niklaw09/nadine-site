@@ -32,5 +32,5 @@ export const SITE = {
 
   // While true, small "Needs Nadine's OK" tags show on unconfirmed content.
   // Set to false only after every tagged item is confirmed or removed.
-  showReviewTags: true,
+  showReviewTags: false,
 };
