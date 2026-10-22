@@ -529,3 +529,20 @@ textarea { min-height: 130px; resize: vertical; }
   body:not([data-no-sticky]) main .btn-row .btn-brass[href="home-value.html"],
   body:not([data-no-sticky]) .footer-cta { display: none; }
 }
+
+/* =========================================================
+   Marketing page: five chapters, heading left, cards right
+   ========================================================= */
+.chapter-nav { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 2rem; }
+.chapter-nav a { font-size: 0.78rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; text-decoration: none; padding-bottom: 4px; border-bottom: 1px solid transparent; }
+.chapter-nav a:hover { border-bottom-color: var(--brass); color: var(--brass-deep); }
+.chapter-row { scroll-margin-top: 80px; }
+.chapter-grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: clamp(32px, 6vw, 88px); align-items: start; }
+.chapter-head h2 { font-size: clamp(2rem, 3.4vw, 2.9rem); }
+.chapter-head p:not(.chapter) { color: var(--ink-soft); max-width: 26em; }
+.cards-2 { grid-template-columns: repeat(2, 1fr); }
+.chapter-row.paper .card { background: var(--ivory); }
+@media (max-width: 860px) {
+  .chapter-grid { grid-template-columns: 1fr; }
+  .cards-2 { grid-template-columns: 1fr; }
+}
